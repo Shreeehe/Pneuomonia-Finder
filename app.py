@@ -38,7 +38,8 @@ if uploaded_file is not None:
     # Prediction
     prediction = model.predict(x)
     if prediction[0][0] > 0.5:
-        st.error("✅ Normal")
+        st.success("✅ Normal")
     else:
-        st.success("⚠️ Pneumonia detected")
+        st.error("⚠️ Pneumonia detected")
+
 
